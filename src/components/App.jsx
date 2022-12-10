@@ -27,13 +27,11 @@ export class App extends Component {
    if(this.state.contacts.find(item => item.name === contact.name)) {
     alert(`${contact.name} is already in contacts`)
     return
+   }
 
-   }else{
     this.setState(prevState => ({
       contacts: [...prevState.contacts, contact],
     }));
-   }
-   
   };
 
   setFilter = e => {
@@ -50,10 +48,9 @@ export class App extends Component {
   };
 
 
-  deleteContact = (name) => {
-  
+  deleteContact = (id) => {
    this.setState(prevState => ({
-    contacts: prevState.contacts.filter(contact => contact.name !== name),
+    contacts: prevState.contacts.filter(contact => contact.id !== id),
   }));
   }
 
