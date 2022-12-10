@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
 import formStyle from '../ContactForm/ContactForm.module.css';
 
@@ -12,7 +11,7 @@ class ContactForm extends Component {
   state = {
     name: '',
     number: '',
-    
+
   };
 
   handleChange = e => {
